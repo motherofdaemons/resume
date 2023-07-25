@@ -18,19 +18,23 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{phonenumber}
+\usepackage{xcolor}
+\usepackage{fontawesome}
 \input{glyphtounicode}
 
-
+\definecolor{accent1}{HTML}{F78FB3}
+\definecolor{accent2}{HTML}{F8A5C2}
+\definecolor{lightgray}{HTML}{999999}
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
+\usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
+% \usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -54,8 +58,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+    \vspace{-4pt}\scshape\raggedright\large\color{accent2}
+}{}{0em}{}[\color{accent2}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -71,8 +75,8 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \color{accent1}\textbf{#1} & #2 \\
+      \color{lightgray}\textit{\small#3} & \color{lightgray}\textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
